@@ -17,15 +17,8 @@ func main() {
 	clearTerm()
 
 	for {
-		currentTime := time.Now()
-
-		currentHour := fmt.Sprintf("%02d", currentTime.Hour())
-		currentMin := fmt.Sprintf("%02d", currentTime.Minute())
-		currentSec := fmt.Sprintf("%02d", currentTime.Second())
-
-		// Format time and convert to Ascii art
-		finalTime := fmt.Sprintf("%v:%v:%v", currentHour, currentMin, currentSec)
-		asciiStr, _ := ascii.Render(finalTime)
+		currentTime := getTime()
+		asciiStr, _ := ascii.Render(currentTime)
 
 		// Overwrite previous time
 		lines := strings.Split(asciiStr, "\n")
@@ -34,6 +27,21 @@ func main() {
 		fmt.Print(asciiStr)
 		time.Sleep(1 * time.Second)
 	}
+}
+
+func getTime() string {
+	currentTime := time.Now()
+	timeFormat := "24"
+
+	if len(os.Args) >= 2 {
+		timeFormat = os.Args[1]
+	}
+
+	if timeFormat == "12" {
+		return currentTime.Format("03:04:05 PM")
+	}
+
+	return currentTime.Format("15:04:05")
 }
 
 func clearLines(n int) {
