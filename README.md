@@ -20,6 +20,12 @@ go install
 
 ## Usage
 
+### Help
+
+```sh
+clocky -h
+```
+
 ### 24 hour format
 
 By default clocky uses 24 hour format
@@ -33,7 +39,7 @@ clocky
 You can also use 12 hour format
 
 ```sh
-clocky 12
+clocky -f 12
 ```
 
 ## Contributing
