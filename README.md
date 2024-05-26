@@ -20,7 +20,7 @@ go install
 
 ## Usage
 
-Simply just run:
+Just simply run:
 ```sh
 clocky
 ```
