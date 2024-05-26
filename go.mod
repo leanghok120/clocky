@@ -1,4 +1,4 @@
-module Clocky
+module github.com/leanghok120/Clocky
 
 go 1.22.3
 
