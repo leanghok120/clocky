@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"os/exec"
@@ -12,12 +13,15 @@ import (
 
 func main() {
 	ascii := figlet4go.NewAsciiRender()
+	var timeFormat string
+	flag.StringVar(&timeFormat, "f", "24", "Time format")
+	flag.Parse()
 
 	// Clear stdout
 	clearTerm()
 
 	for {
-		currentTime := getTime()
+		currentTime := getTime(timeFormat)
 		asciiStr, _ := ascii.Render(currentTime)
 
 		// Overwrite previous time
@@ -29,19 +33,16 @@ func main() {
 	}
 }
 
-func getTime() string {
+func getTime(format string) string {
 	currentTime := time.Now()
-	timeFormat := "24"
 
-	if len(os.Args) >= 2 {
-		timeFormat = os.Args[1]
-	}
-
-	if timeFormat == "12" {
+	if format == "12" {
 		return currentTime.Format("03:04:05 PM")
+	} else if format == "" || format == "24" {
+		return currentTime.Format("15:04:05")
 	}
 
-	return currentTime.Format("15:04:05")
+	return "Invalid time format"
 }
 
 func clearLines(n int) {
