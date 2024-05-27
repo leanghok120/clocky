@@ -14,7 +14,8 @@ From source:
 
 ```sh
 git clone https://github.com/leanghok120/clocky.git
-cd clocky
+cd clocky/cmd/clocky/
+go build
 go install
 ```
 
