@@ -1,6 +1,6 @@
-# Clocky
+# clocky
 
-Clocky is a **simple** command-line timer application written in Go. It displays the current time in an ASCII art format that updates every second.
+clocky is a **simple** CLI timer written in Go. clocky is a project inspired by [tty-clock](https://github.com/xorg62/tty-clock).
 
 ## Installation
 
