@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/leanghok120/clocky/pkg/clocky"
+	"github.com/leanghok120/clocky/pkg/timeutil"
 	"github.com/mbndr/figlet4go"
 )
 
@@ -15,16 +15,16 @@ func main() {
 	flag.Parse()
 
 	// Clear stdout
-	clocky.ClearTerm()
+	timeutil.ClearTerm()
 
 	ascii := figlet4go.NewAsciiRender()
 	for {
-		currentTime := clocky.GetTime(timeFormat)
+		currentTime := timeutil.GetTime(timeFormat)
 		asciiStr, _ := ascii.Render(currentTime)
 
 		// Overwrite previous time
-		lines := clocky.SplitLines(asciiStr)
-		clocky.ClearLines(len(lines))
+		lines := timeutil.SplitLines(asciiStr)
+		timeutil.ClearLines(len(lines))
 
 		fmt.Print(asciiStr)
 		time.Sleep(1 * time.Second)

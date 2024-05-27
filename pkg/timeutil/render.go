@@ -1,4 +1,4 @@
-package clocky
+package timeutil
 
 import (
 	"fmt"
