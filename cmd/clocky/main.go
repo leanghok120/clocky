@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/leanghok120/clocky/pkg/timeutil"
+	"github.com/leanghok120/clocky/internal/timeutil"
 	"github.com/mbndr/figlet4go"
 )
 
