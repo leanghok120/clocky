@@ -21,3 +21,8 @@ func ClearTerm() {
 		fmt.Println(err)
 	}
 }
+
+func DisplayVersion() {
+	fmt.Println("v1.2.4")
+	os.Exit(0)
+}

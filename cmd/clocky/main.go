@@ -11,6 +11,10 @@ import (
 func main() {
 	cfg := util.ParseFlags()
 
+	if cfg.ShowVersion {
+		util.DisplayVersion()
+	}
+
 	ascii := figlet4go.NewAsciiRender()
 	for {
 		// Clear stdout
