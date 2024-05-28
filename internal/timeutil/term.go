@@ -1,6 +1,7 @@
 package timeutil
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 )
@@ -15,5 +16,8 @@ func ClearTerm() {
 
 	cmd := exec.Command(cmdName)
 	cmd.Stdout = os.Stdout
-	cmd.Run()
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err)
+	}
 }
