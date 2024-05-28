@@ -1,26 +1,22 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"time"
 
-	"github.com/leanghok120/clocky/internal/timeutil"
+	"github.com/leanghok120/clocky/internal/util"
 	"github.com/mbndr/figlet4go"
 )
 
 func main() {
-	var timeFormat string
-	flag.StringVar(&timeFormat, "f", "24", "Time format (12 or 24)")
-	flag.Parse()
+	cfg := util.ParseFlags()
 
 	ascii := figlet4go.NewAsciiRender()
-
 	for {
 		// Clear stdout
-		timeutil.ClearTerm()
+		util.ClearTerm()
 
-		currentTime := timeutil.GetTime(timeFormat)
+		currentTime := util.GetTime(cfg.TimeFormat)
 		asciiStr, _ := ascii.Render(currentTime)
 
 		fmt.Print(asciiStr)

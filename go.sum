@@ -1,2 +1,4 @@
 github.com/mbndr/figlet4go v0.0.0-20190224160619-d6cef5b186ea h1:mQncVDBpKkAecPcH2IMGpKUQYhwowlafQbfkz2QFqkc=
 github.com/mbndr/figlet4go v0.0.0-20190224160619-d6cef5b186ea/go.mod h1:QzTGLGoOqLHUBK8/EZ0v4Fa4CdyXmdyRwCHcl0YbeO4=
+github.com/rthornton128/goncurses v0.0.0-20231014161942-82671379df88 h1:bNvZ7P4l4rvg1O3qNDRJ4FNgKASMoG+V7OIpu4SIkgA=
+github.com/rthornton128/goncurses v0.0.0-20231014161942-82671379df88/go.mod h1:AHlKFomPTwmO7H2vL8d7VNrQNQmhMi/DBhDnHRhjbCo=
