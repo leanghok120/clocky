@@ -10,6 +10,8 @@ all: build
 .PHONY: build
 build:
 	go build $(CMD_DIR)
+	env GOOS=windows GOARCH=amd64 go build $(CMD_DIR)
+	env GOOS=darwin GOARCH=arm64 go build $(CMD_DIR)
 
 .PHONY: install
 install:
@@ -19,6 +21,8 @@ install:
 clean:
 	go clean
 	rm -f $(BINARY_NAME)
+	rm -f $(BINARY_NAME)m
+	rm -f $(BINARY_NAME).exe
 
 .PHONY: run
 run:
