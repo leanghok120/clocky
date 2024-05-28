@@ -1,6 +1,6 @@
 # clocky
 
-clocky is a **simple** CLI timer written in Go. clocky is a project inspired by [tty-clock](https://github.com/xorg62/tty-clock).
+clocky is a **simple** CLI clock written in Go. clocky is a project inspired by [tty-clock](https://github.com/xorg62/tty-clock).
 
 ## Installation
 
