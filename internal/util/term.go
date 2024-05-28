@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"strings"
+
+	"github.com/rthornton128/goncurses"
 )
 
 func ClearTerm() {
@@ -25,4 +28,14 @@ func ClearTerm() {
 func DisplayVersion() {
 	fmt.Println("v1.2.4")
 	os.Exit(0)
+}
+
+func CenterText(stdscr goncurses.Window, asciiStr string) {
+	lines := strings.Split(asciiStr, "\n")
+	maxY, maxX := stdscr.MaxYX()
+	startY := (maxY - len(lines)) / 2
+	for i, line := range lines {
+		startX := (maxX - len(line)) / 2
+		stdscr.MovePrint(startY+i, startX, line)
+	}
 }
