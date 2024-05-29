@@ -9,9 +9,10 @@ all: build
 
 .PHONY: build
 build:
-	go build $(CMD_DIR)
-	env GOOS=windows GOARCH=amd64 go build $(CMD_DIR)
+	# env GOOS=windows GOARCH=amd64 go build $(CMD_DIR)
 	env GOOS=darwin GOARCH=arm64 go build $(CMD_DIR)
+	mv clocky clockym
+	go build $(CMD_DIR)
 
 .PHONY: install
 install:
