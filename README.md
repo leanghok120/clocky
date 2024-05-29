@@ -15,7 +15,7 @@ After you install the binary (clockym) for macos, make sure to rename it to "clo
 ### Go
 
 ```sh
-go install github.com/leanghok120/clocky@latest
+go install github.com/leanghok120/clocky/cmd/clocky@latest
 ```
 
 From source:
