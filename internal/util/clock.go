@@ -15,3 +15,9 @@ func GetTime(format string) string {
 
 	return "Invalid time format"
 }
+
+func GetDate() string {
+	currentDate := time.Now()
+
+	return currentDate.Format("02:01:2006") // Returns the date in DD:MM:YYYY
+}

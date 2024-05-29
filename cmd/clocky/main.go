@@ -28,12 +28,16 @@ func main() {
 		stdscr.Clear()
 
 		currentTime := util.GetTime(cfg.TimeFormat)
+		currentDate := util.GetDate()
+
 		asciiStr, _ := ascii.Render(currentTime)
 
 		if cfg.IsCentered {
 			util.CenterText(*stdscr, asciiStr)
+			stdscr.Print(currentDate)
 		} else {
 			stdscr.Print(asciiStr)
+			stdscr.Print(currentDate)
 		}
 
 		stdscr.Refresh()
