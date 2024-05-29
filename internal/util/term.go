@@ -26,7 +26,7 @@ func ClearTerm() {
 }
 
 func DisplayVersion() {
-	fmt.Println("v1.3.1")
+	fmt.Println("v1.3.2")
 	os.Exit(0)
 }
 
