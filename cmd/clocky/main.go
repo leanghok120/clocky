@@ -34,10 +34,14 @@ func main() {
 
 		if cfg.IsCentered {
 			util.CenterText(*stdscr, asciiStr)
-			stdscr.Print(currentDate)
+			if cfg.ShowDate {
+				stdscr.Print(currentDate)
+			}
 		} else {
 			stdscr.Print(asciiStr)
-			stdscr.Print(currentDate)
+			if cfg.ShowDate {
+				stdscr.Print(currentDate)
+			}
 		}
 
 		stdscr.Refresh()
