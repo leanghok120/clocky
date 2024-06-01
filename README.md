@@ -6,7 +6,7 @@ clocky is a **simple** CLI clock written in Go. clocky is a project inspired by 
 
 ### Binary
 
-There are a couple of binaries for mac (arm64) and linux. Head over to [Releases](https://github.com/leanghok120/clocky/releases/tag/v1.2.5) to download them.
+There are a couple of binaries for mac (arm64) and linux. Head over to [Releases](https://github.com/leanghok120/clocky/releases/tag/v1.3.0) to download them.
 
 #### Macos
 
